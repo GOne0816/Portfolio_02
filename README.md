@@ -28,7 +28,7 @@
 
 ## 📸 Preview
 
-![Portfolio Preview](./preview.png)
+![Portfolio Preview](./public/preview.png)
 
 ---
 
