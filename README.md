@@ -1,12 +1,91 @@
-# React + Vite
+<h1 align="center">
+  🚀 Jag Jeevan Ricky's Portfolio
+</h1>
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+<p align="center">
+  <img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" />
+  <img src="https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white" />
+  <img src="https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white" />
+  <img src="https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=FFD62E" />
+</p>
 
-Currently, two official plugins are available:
+<p align="center">
+  <b>A modern, responsive portfolio built with React, Tailwind CSS, and Vite.</b>
+</p>
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## Expanding the ESLint configuration
+## ✨ Features
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- ⚡ **Lightning Fast**: Powered by Vite and React
+- 🎨 **Modern UI**: Tailwind CSS & Shadcn UI
+- 📱 **Fully Responsive**: Looks great on all devices
+- 🧩 **Component-Based**: Easy to extend and maintain
+- 🌙 **Dark Themed**: Eye-friendly design
+- 🛠️ **Showcases Projects, Skills, Experience, and More**
+
+---
+
+## 📸 Preview
+
+![Portfolio Preview](./preview.png)
+
+---
+
+## 🚀 Getting Started
+
+```bash
+# Clone the repository
+git clone https://github.com/GOne0816/Portfolio_03.git
+
+# Navigate to the project directory
+cd Portfolio_03
+
+# Install dependencies
+npm install
+
+# Start the development server
+npm run dev
+```
+
+---
+
+## 🛠️ Tech Stack
+
+- **Frontend:** React, Tailwind CSS, Shadcn UI, Framer Motion
+- **Backend:** Node.js, Express, MongoDB (for full stack projects)
+- **Deployment:** Vercel
+
+---
+
+## 📂 Folder Structure
+
+```
+Portfolio_03/
+├── public/
+├── src/
+│   ├── Components/
+│   ├── App.jsx
+│   └── main.jsx
+├── package.json
+└── README.md
+```
+
+---
+
+## 👨‍💻 Author
+
+**Jag Jeevan Ricky**  
+[GitHub](https://github.com/GOne0816) • [LinkedIn](https://www.linkedin.com/in/jag-jeevan-ricky)
+
+---
+
+## 📄 License
+
+This project is open source and available under the [MIT License](LICENSE).
+
+---
+
+<p align="center">
+  <b>Made with ❤️ by Jag Jeevan Ricky</b>
+</p>
