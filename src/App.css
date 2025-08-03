@@ -9,4 +9,5 @@ box-sizing: border-box;
 /* font-family: 'Inter', sans-serif; */
 font-family: "Poppins", sans-serif;
 color: #fff;
+scroll-behavior: smooth;
 }

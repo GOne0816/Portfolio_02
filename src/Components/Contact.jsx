@@ -1,8 +1,9 @@
-import React, { useRef, useState } from "react";
+import React, { useRef } from "react";
+import emailjs from "emailjs-com";
 
 const Contact = () => {
   const formRef = useRef(null);
-  const [sent, setSent] = useState(false);
+  // const [sent, setSent] = useState(false);
 
   // You can use EmailJS or Formspree for actual email sending.
   // This example uses EmailJS (https://www.emailjs.com/)
@@ -10,17 +11,30 @@ const Contact = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    emailjs.sendForm(
+      'service_fxoifh4',     // replace this
+      'template_6nj0uvb',    // replace this
+      formRef.current,
+      '-MTjkf99jjWSRGA3_'      // replace this
+    )
+    .then((result) => {
+        console.log(result.text);
+        alert("Message sent successfully!");
+    }, (error) => {
+        console.log(error.text);
+        alert("Failed to send message.");
+    });
     // EmailJS integration (uncomment and configure to use)
     // import emailjs from 'emailjs-com';
     // emailjs.sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', formRef.current, 'YOUR_USER_ID')
     //   .then(() => setSent(true), () => alert("Failed to send!"));
-    setSent(true); // Remove this line when using real email service
+    // setSent(true); // Remove this line when using real email service
     formRef.current.reset();
   };
 
   return (
-    <div className="max-w-7xl mx-auto max-sm:mx-2 my-36 py-20 px-4 bg-[#63e]/10 rounded-2xl ring-2 ring-[#63e]/30">
-      <h2 className="text-4xl font-bold text-white text-center mb-6">Contact Me</h2>
+    <div id="Contact" className="max-w-7xl mx-auto max-sm:mx-2 my-36 py-16 px-4 bg-[#63e]/10 rounded-2xl ring-2 ring-[#63e]/30">
+      <h1 className="text-5xl font-bold text-white text-center mb-12">Contact Me</h1>
       <div className="flex flex-col md:flex-row gap-8">
         {/* Contact Details */}
         <div className="flex-1 flex flex-col justify-center mb-8 md:mb-0">
@@ -90,9 +104,9 @@ const Contact = () => {
             >
               Send Message
             </button>
-            {sent && (
+            {/* {sent && (
               <p className="text-green-400 text-center mt-4">Thank you! Your message has been sent.</p>
-            )}
+            )} */}
           </form>
         </div>
       </div>

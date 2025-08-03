@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 const Home = () => {
   return (
     <div>
@@ -14,9 +15,11 @@ const Home = () => {
         <p className="text-base sm:text-lg md:text-xl text-gray-200 px-2 sm:px-8 md:px-24 lg:px-40 xl:px-56">
           Let's connect and create something amazing together!
         </p>
+        <a href="#Contact">
         <button className="bg-[#63e] bg-gradient-to-br from-[#63e] to-[#a3a] rounded-full ring-4 ring-[#63e]/30 px-8 py-4 my-8 shadow-xl font-semibold text-sm hover:scale-105 hover:shadow-[#a3a]/60 transition-all duration-300">
           Contact Me!
         </button>
+        </a>
       </div>
     </div>
   )
