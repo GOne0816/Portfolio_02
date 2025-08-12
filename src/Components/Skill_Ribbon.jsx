@@ -1,83 +1,76 @@
-import { FaReact } from "react-icons/fa6";
-import { FaHtml5 } from "react-icons/fa6";
-import { FaCss3Alt } from "react-icons/fa6";
-import { IoLogoJavascript } from "react-icons/io5";
-import { FaNodeJs } from "react-icons/fa6";
-import { SiMongodb } from "react-icons/si";
+import React from 'react';
+import { FaReact, FaHtml5, FaCss3Alt, FaNodeJs } from "react-icons/fa6";
+import { IoLogoJavascript, IoLogoFirebase } from "react-icons/io5";
+import { SiMongodb, SiTypescript, SiShadcnui } from "react-icons/si";
 import { RiTailwindCssFill } from "react-icons/ri";
-import { SiTypescript } from "react-icons/si";
-import { IoLogoFirebase } from "react-icons/io5";
 import { TbBrandFramerMotion } from "react-icons/tb";
-import { SiShadcnui } from "react-icons/si";
-
-
 
 // Example skill data with SVG icons (replace with your own or use icon libraries)
 const skills = [
   {
     name: "HTML5",
     icon: (
-      <FaHtml5 className="size-12"/>
+      <FaHtml5 />
     ),
   },
   {
     name: "CSS3",
     icon: (
-      <FaCss3Alt className="size-12"/>
+      <FaCss3Alt />
     ),
   },
   {
     name: "JavaScript",
     icon: (
-      <IoLogoJavascript className="size-12"/>
+      <IoLogoJavascript />
     ),
   },
   {
     name: "React",
     icon: (
-      <FaReact className="size-12"/>
+      <FaReact />
     ),
   },
   {
     name: "Node.js",
     icon: (
-      <FaNodeJs className="size-12"/>
+      <FaNodeJs />
     ),
   },
   {
     name: "MongoDB",
     icon: (
-      <SiMongodb className="size-12"/>
+      <SiMongodb />
     ),
   },
   {
     name: "Tailwind",
     icon: (
-      <RiTailwindCssFill className="size-12"/>
+      <RiTailwindCssFill />
     ),
   },
   {
     name: "TypeScript",
     icon: (
-      <SiTypescript className="size-12"/>
+      <SiTypescript />
     ),
   },
   {
     name: "Firebase",
     icon: (
-      <IoLogoFirebase className="size-12"/>
+      <IoLogoFirebase />
     ),
   },
   {
     name: "Framer Motion",
     icon: (
-      <TbBrandFramerMotion className="size-12"/>
+      <TbBrandFramerMotion />
     ),
   },
   {
     name: "ShadCN UI",
     icon: (
-      <SiShadcnui className="size-12"/>
+      <SiShadcnui />
     ),
   },
 ];
@@ -86,37 +79,35 @@ const skills = [
 const loopedSkills = [...skills, ...skills];
 
 const Skill_Ribbon = () => (
-  <div className="overflow-hidden w-full my-8 py-6 bg-transparent">
+  <div className="overflow-hidden w-full my-4 sm:my-6 md:my-8 py-4 sm:py-6 bg-transparent">
     <div className="relative w-full">
       <div
-        className="flex gap-12 animate-skill-ribbon"
+        className="flex gap-6 sm:gap-8 md:gap-12 animate-skill-ribbon"
         style={{
-          width: `${loopedSkills.length * 12}rem`,
+          width: `${loopedSkills.length * 8}rem`,
         }}
       >
         {loopedSkills.map((skill, idx) => (
           <div
             key={idx}
-            className="flex flex-col items-center min-w-[8rem] select-none"
+            className="flex flex-col items-center min-w-[6rem] sm:min-w-[7rem] md:min-w-[8rem] select-none"
           >
-            <div>{skill.icon}</div>
-            <span className="mt-2 text-white font-semibold text-sm">{skill.name}</span>
+            <div className="text-3xl sm:text-4xl md:text-5xl text-[#63e]">{skill.icon}</div>
+            <span className="mt-2 text-white font-semibold text-xs sm:text-sm md:text-base">{skill.name}</span>
           </div>
         ))}
       </div>
     </div>
     {/* Animation styles */}
-    <style>
-      {`
-        @keyframes skill-ribbon-loop {
-          0% { transform: translateX(0); }
-          100% { transform: translateX(-50%); }
-        }
-        .animate-skill-ribbon {
-          animation: skill-ribbon-loop 24s linear infinite;
-        }
-      `}
-    </style>
+    <style jsx>{`
+      @keyframes skill-ribbon-loop {
+        0% { transform: translateX(0); }
+        100% { transform: translateX(-50%); }
+      }
+      .animate-skill-ribbon {
+        animation: skill-ribbon-loop 30s linear infinite;
+      }
+    `}</style>
   </div>
 );
 

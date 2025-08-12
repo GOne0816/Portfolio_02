@@ -36,35 +36,34 @@ const FAQ = () => {
 	};
 
 	return (
-		<div className="max-w-3xl mx-auto py-20 px-4">
-			<h2 className="text-4xl font-bold text-white text-center mb-8">
+		<div className="max-w-3xl mx-auto py-12 sm:py-16 md:py-20 px-4 sm:px-6">
+			<h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white text-center mb-6 sm:mb-8 md:mb-10">
 				Frequently Asked Questions
 			</h2>
-			<div className="space-y-4">
+			<div className="space-y-3 sm:space-y-4">
 				{faqs.map((faq, idx) => (
 					<div
 						key={idx}
 						className="bg-[#63e]/10 rounded-xl ring-2 ring-[#63e]/30 transition-all duration-300 hover:ring-[#63e] hover:shadow-[0_0_16px_4px_rgba(99,51,238,0.5)]"
 					>
 						<button
-							className="w-full text-left px-6 py-4 focus:outline-none flex justify-between items-center"
+							className="w-full text-left px-4 sm:px-6 py-3 sm:py-4 focus:outline-none flex justify-between items-center"
 							onClick={() => toggle(idx)}
 						>
-							<span className="text-lg font-semibold text-[#63e]">
+							<span className="text-base sm:text-lg font-semibold text-[#63e] pr-4">
 								{faq.question}
 							</span>
-							<span className="text-2xl text-[#63e]">
+							<span className="text-xl sm:text-2xl text-[#63e] flex-shrink-0">
 								{openIndex === idx ? "−" : "+"}
 							</span>
 						</button>
 						<div
-							className={`px-6 pb-4 text-gray-200 text-base transition-all duration-300 ease-in-out overflow-hidden ${
+							className={`px-4 sm:px-6 pb-3 sm:pb-4 text-gray-200 text-sm sm:text-base transition-all duration-300 ease-in-out overflow-hidden ${
 								openIndex === idx
 									? "opacity-100 max-h-[500px]"
 									: "opacity-0 max-h-0"
 							}`}
 							style={{
-								// Optional: for even smoother animation, you can add will-change
 								willChange: "opacity, max-height",
 							}}
 						>

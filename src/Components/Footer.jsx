@@ -40,24 +40,29 @@ const socialLinks = [
 ];
 
 const Footer = () => (
-  <footer className="py-8 mt-20 border-t-4 border-[#63e]/30">
-    <div className="max-w-5xl mx-auto flex flex-col md:flex-row items-center justify-between px-4">
-      <div className="text-gray-300 text-center md:text-left mb-4 md:mb-0">
-        © {new Date().getFullYear()} Jag Jeevan Ricky. All rights reserved.
-      </div>
-      <div className="flex space-x-6">
-        {socialLinks.map((link) => (
-          <a
-            key={link.name}
-            href={link.url}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-[#63e] hover:text-[#a3a] transition-colors"
-            aria-label={link.name}
-          >
-            {link.icon}
-          </a>
-        ))}
+  <footer className="py-6 sm:py-8 mt-12 sm:mt-16 md:mt-20 border-t-2 sm:border-t-4 border-[#63e]/30">
+    <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="flex flex-col sm:flex-row items-center justify-between">
+        <div className="text-gray-300 text-center sm:text-left text-sm sm:text-base mb-4 sm:mb-0">
+          © {new Date().getFullYear()} Jag Jeevan Ricky. All rights reserved.
+        </div>
+        <div className="flex space-x-4 sm:space-x-6">
+          {socialLinks.map((link) => (
+            <a
+              key={link.name}
+              href={link.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-[#63e] hover:text-[#a3a] transition-colors"
+              aria-label={link.name}
+            >
+              <span className="sr-only">{link.name}</span>
+              {React.cloneElement(link.icon, {
+                className: "w-5 h-5 sm:w-6 sm:h-6",
+              })}
+            </a>
+          ))}
+        </div>
       </div>
     </div>
   </footer>

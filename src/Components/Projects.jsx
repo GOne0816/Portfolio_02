@@ -1,4 +1,5 @@
 // eslint-disable-next-line no-unused-vars
+import React from 'react';
 import { motion } from "framer-motion";
 
 const projects = [
@@ -53,27 +54,27 @@ const projects = [
 ];
 
 const Projects = () => (
-	<div className="max-w-7xl mx-auto py-12 px-2 sm:px-4">
-		<h2 className="text-4xl sm:text-6xl font-bold mb-8 text-white text-center">
+	<div className="max-w-7xl mx-auto py-8 sm:py-12 md:py-16 px-4 sm:px-6 lg:px-8">
+		<h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 sm:mb-6 md:mb-8 text-white text-center">
 			Projects
 		</h2>
-		<p className="text-gray-300 mb-12 text-center text-base sm:text-lg">
+		<p className="text-gray-300 mb-8 sm:mb-10 md:mb-12 text-center text-sm sm:text-base md:text-lg max-w-2xl mx-auto">
 			Here are a few of my full stack projects, showcasing my skills in building
 			robust, scalable, and user-friendly applications.
 		</p>
-		<div className="grid grid-cols-1 md:grid-cols-2 gap-8 ">
+		<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
 			{projects.map((project) => (
 				<motion.div
 					key={project.title}
-					className="border-2 border-[#63e]/30 bg-[#63e]/10 p-6 rounded-lg shadow-lg flex flex-col h-full"
+					className="border-2 border-[#63e]/30 bg-[#63e]/10 p-4 sm:p-6 rounded-lg shadow-lg flex flex-col h-full"
 					whileHover={{
 						scale: 1.02,
 						boxShadow: "0 0 32px 8px rgba(99,51,238,0.15)",
 						transition: { type: "spring", stiffness: 300, damping: 20 },
 					}}
-          whileTap={{ scale: 0.99 }}
+					whileTap={{ scale: 0.99 }}
 				>
-					<h3 className="text-2xl font-semibold text-[#63e] mb-2">
+					<h3 className="text-xl sm:text-2xl font-semibold text-[#63e] mb-2">
 						{project.title}
 					</h3>
 					<div className="flex flex-wrap gap-2 mb-2">
@@ -86,13 +87,15 @@ const Projects = () => (
 							</span>
 						))}
 					</div>
-					<p className="text-gray-200 mb-4">{project.description}</p>
+					<p className="text-gray-200 text-sm sm:text-base mb-4 flex-grow">
+						{project.description}
+					</p>
 					<div className="mt-auto flex gap-4">
 						<a
 							href={project.link}
 							target="_blank"
 							rel="noopener noreferrer"
-							className="text-[#63e] underline hover:text-[#a3a]"
+							className="text-[#63e] underline hover:text-[#a3a] text-sm sm:text-base"
 						>
 							Code
 						</a>
@@ -100,7 +103,7 @@ const Projects = () => (
 							href={project.demo}
 							target="_blank"
 							rel="noopener noreferrer"
-							className="text-[#63e] underline hover:text-[#a3a]"
+							className="text-[#63e] underline hover:text-[#a3a] text-sm sm:text-base"
 						>
 							Live Demo
 						</a>

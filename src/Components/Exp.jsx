@@ -1,8 +1,16 @@
 const experiences = [
   {
+    role: "Front End Developer Intern",
+    company: "Unified Mentor",
+    period: "June 2025 - August 2025",
+    description:
+      "Developing user interfaces and enhancing user experiences for web applications. Collaborating with designers and back-end developers to implement responsive designs.",
+    type: "internship",
+  },
+  {
     role: "Infrastructure Consultant Intern",
     company: "RackMonk Datacenters Pvt. Ltd.",
-    period: "Feb 2025 - Present",
+    period: "Feb 2025 - April 2025",
     description:
       "Assisted in managing cloud infrastructure and optimizing server performance. Gained experience in AWS, Docker, and Kubernetes.",
     type: "internship",

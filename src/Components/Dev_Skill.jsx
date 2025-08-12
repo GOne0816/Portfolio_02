@@ -44,27 +44,29 @@ const skills = [
 ];
 
 const Dev_Skill = () => (
-  <div className="max-w-7xl mx-auto py-32">
-    <h2 className="text-6xl font-bold mb-8 text-white text-center">Full Stack Skills</h2>
-    <p className="text-gray-300 mb-12 px-12 text-center">
+  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24 lg:py-32">
+    <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 sm:mb-6 lg:mb-8 text-white text-center">
+      Full Stack Skills
+    </h2>
+    <p className="text-gray-300 mb-8 sm:mb-10 lg:mb-12 px-4 sm:px-8 lg:px-12 text-center text-sm sm:text-base lg:text-lg max-w-3xl mx-auto">
       Here are the core tools and technologies I use to build robust, scalable, and modern web applications. Each bar represents my proficiency and experience with the respective technology.
     </p>
-    <div className="bg-[#63e]/5 rounded-2xl ring-2 ring-[#63e]/30 p-8 max-sm:mx-2">
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+    <div className="bg-[#63e]/5 rounded-2xl ring-2 ring-[#63e]/30 p-4 sm:p-6 lg:p-8">
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6 lg:gap-8">
         {skills.map((skill) => (
-          <div key={skill.name} className="bg-[#63e]/10 p-6 rounded-lg shadow-lg flex flex-col justify-between h-full">
+          <div key={skill.name} className="bg-[#63e]/10 p-4 sm:p-5 lg:p-6 rounded-lg shadow-lg flex flex-col justify-between h-full">
             <div>
               <div className="flex justify-between items-center mb-2">
-                <span className="text-lg font-semibold text-[#63e]">{skill.name}</span>
-                <span className="text-gray-200 font-bold">{skill.percent}%</span>
+                <span className="text-base sm:text-lg font-semibold text-[#63e]">{skill.name}</span>
+                <span className="text-gray-200 font-bold text-sm sm:text-base">{skill.percent}%</span>
               </div>
-              <div className="w-full bg-gray-700 rounded-full h-4 mb-2">
+              <div className="w-full bg-gray-700 rounded-full h-3 sm:h-4 mb-2">
                 <div
-                  className="bg-gradient-to-r from-[#63e] to-[#a3a] h-4 rounded-full transition-all duration-700"
+                  className="bg-gradient-to-r from-[#63e] to-[#a3a] h-3 sm:h-4 rounded-full transition-all duration-700"
                   style={{ width: `${skill.percent}%` }}
                 ></div>
               </div>
-              <p className="text-gray-300 text-sm">{skill.description}</p>
+              <p className="text-gray-300 text-xs sm:text-sm">{skill.description}</p>
             </div>
           </div>
         ))}
