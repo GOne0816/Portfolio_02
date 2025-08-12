@@ -15,6 +15,7 @@ const App = () => {
   const mainRef = useRef(null);
 
   const handleScrollTop = () => {
+    console.log(mainRef.current);
     if (mainRef.current) {
       mainRef.current.scrollTo({ top: 0, behavior: "smooth" });
     } else {
