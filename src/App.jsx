@@ -42,7 +42,9 @@ const App = () => {
         <Skill_Ribbon />
         <Projects />
         <HireMe />
-        <Contact />
+        <div id="Contact" className="pt-2">
+          <Contact />
+        </div>
         <Switch_Game />
         <FAQ />
         <Footer />
